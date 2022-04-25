@@ -6,7 +6,7 @@ import {
   marginProps,
   paddingProps,
   getColor
-} from '~/styles/styled-system'
+} from '../../../styles/styled-system'
 
 export const BaseText = styled.Text`
   ${sizeProps}

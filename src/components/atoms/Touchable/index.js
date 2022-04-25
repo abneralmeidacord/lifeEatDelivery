@@ -13,7 +13,7 @@ import {
   sizePropsTypes,
   borderProps,
   borderPropsTypes,
-} from '~/styles/styled-system'
+} from '../../../styles/styled-system'
 
 export const Touchable = styled.TouchableOpacity`
   ${sizeProps}
