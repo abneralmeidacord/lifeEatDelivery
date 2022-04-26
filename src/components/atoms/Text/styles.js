@@ -13,5 +13,5 @@ export const BaseText = styled.Text`
   ${fontProps}
   ${marginProps}
   ${paddingProps}
-  color: ${({ color }) => getColor(color || 'white')}
+  color: ${({ color }) => getColor(color || 'primary')}
 `

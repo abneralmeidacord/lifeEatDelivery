@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 import { BaseText } from './styles';
 import {
+  fontPropsTypes,
   sizePropsTypes,
   colorPropsTypes,
   marginPropsTypes,
   paddingPropsTypes,
-} from '../../../styles/styled-system';
+} from '~/styles/styled-system';
 
 export const Text = ({ children, ...props }) => (
   <BaseText {...props}>{children}</BaseText>
@@ -19,19 +20,19 @@ Text.ScreenTitle = ({ children, ...props }) => (
 );
 
 Text.Title = ({ children, ...props }) => (
-  <BaseText fontSize={18} fontFamily="bold" {...props}>
+  <BaseText fontSize={18} fontFamily="bold" color="primary" {...props}>
     {children}
   </BaseText>
 );
 
 Text.RegularText = ({ children, ...props }) => (
   <BaseText fontsize={14} fontFamily="regular" {...props}>
-    {children}>
+    {children}
   </BaseText>
 );
 Text.MediumText = ({ children, ...props }) => (
   <BaseText fontsize={14} fontFamily="medium" {...props}>
-    {children}>
+    {children}
   </BaseText>
 );
 
@@ -57,6 +58,7 @@ Text.propTypes = {
     PropTypes.node,
     PropTypes.func,
   ]),
+  ...fontPropsTypes,
   ...sizePropsTypes,
   ...colorPropsTypes,
   ...marginPropsTypes,

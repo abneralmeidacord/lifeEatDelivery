@@ -3,7 +3,7 @@ import { Touchable } from '../Touchable';
 
 
 export const ButtonContainer = styled(Touchable).attrs(props => ({
-    bg: 'primary',
+    color: 'primary',
     height: 50,
     width: 335
 }))`

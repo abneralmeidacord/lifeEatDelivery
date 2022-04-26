@@ -1,13 +1,13 @@
 import React from 'react';
 import { ButtonContainer } from './styles';
-import { Title } from '../Text'
+import { Text } from '../Text'
 
 export const Button = ({ children, outline, ...props }) => {
   return (
     <ButtonContainer {...props}>
-      <Title>
+      <Text>
         {String(children).toUpperCase()}
-      </Title>
+      </Text>
     </ButtonContainer>
   );
 };
