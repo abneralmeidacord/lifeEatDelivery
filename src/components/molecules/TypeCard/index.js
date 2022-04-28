@@ -26,7 +26,7 @@ export const TypeCard = ({
       bw={1}
       borderColor="primary"
       {...props}>
-      <Text.CardText size={12} color="primary">
+      <Text.CardText size={12} color={selected ? 'white' : 'primary'}>
         {text}
       </Text.CardText>
     </Touchable>
