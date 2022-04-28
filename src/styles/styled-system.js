@@ -173,7 +173,7 @@ export const flexPropsTypes = {
 const fontFamilies = fonts
 
 export const fontProps = ({
-  fontFamily = 'bold',
+  fontFamily = 'semiBold',
   underline,
   align,
   letterSpacing,

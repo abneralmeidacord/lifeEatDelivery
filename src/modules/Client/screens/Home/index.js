@@ -1,9 +1,10 @@
 import React from 'react';
-import { Text, Avatar, Box } from '~/components';
+import { Text, Avatar, Box, TypeList } from '~/components';
 
 export const HomeScreen = () => {
   return (
     <Box
+      display="flex"
       borderColor="primary"
       mt={36}
       mr={48}
@@ -25,7 +26,7 @@ export const HomeScreen = () => {
           flexDir="column"
           alingItems="flex-start"
           justifyContent="flex-start">
-          <Text.Title pb={8}> Olá, Abner!</Text.Title>
+          <Text.Title mb={8}>Olá, Abner!</Text.Title>
           <Text.RegularText>Seja bem-vindo novamente.</Text.RegularText>
         </Box>
         <Box
@@ -41,6 +42,12 @@ export const HomeScreen = () => {
             }}
           />
         </Box>
+      </Box>
+      <Box>
+        <Text.Title ml={20} mt={24} mb={16}>
+          Cardápio
+        </Text.Title>
+        <TypeList />
       </Box>
     </Box>
   );

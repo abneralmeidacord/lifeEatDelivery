@@ -30,6 +30,7 @@ Text.RegularText = ({ children, ...props }) => (
     {children}
   </BaseText>
 );
+
 Text.MediumText = ({ children, ...props }) => (
   <BaseText fontsize={14} fontFamily="medium" {...props}>
     {children}
@@ -48,7 +49,7 @@ Text.CardTitle = ({ children, ...props }) => (
   </BaseText>
 );
 Text.CardText = ({ children, ...props }) => (
-  <BaseText fontsize={10} fontFamily="medium" {...props}></BaseText>
+  <BaseText fontsize={12} fontFamily="medium" {...props}></BaseText>
 );
 
 Text.propTypes = {
