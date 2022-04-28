@@ -5,15 +5,17 @@ import {
   HistoryScreen,
   ProfileScreen,
 } from '../screens';
-import { BottomBar } from '~/components';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack';
+import { BottomBar } from '~/components';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const BottomNavigator = () => {
   const Tab = createBottomTabNavigator();
 
   return (
-    <Tab.Navigator tabBar={props => <BottomBar {...props} />} headerMode="none">
+    <Tab.Navigator
+      tabBar={props => <BottomBar {...props} />}
+      screenOptions={{ headerShown: false }}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Cart" component={CartScreen} />
       <Tab.Screen name="History" component={HistoryScreen} />
@@ -23,9 +25,9 @@ const BottomNavigator = () => {
 };
 
 export const ClientNavigator = () => {
-  const Stack = createStackNavigator();
+  const Stack = createNativeStackNavigator();
   return (
-    <Stack.Navigator headerMode="none">
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={BottomNavigator} />
     </Stack.Navigator>
   );

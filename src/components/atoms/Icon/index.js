@@ -4,6 +4,7 @@ import { Box } from '~/components';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Material from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
+import { theme } from '~/styles/theme';
 
 export const Icon = withTheme(
   ({
@@ -21,20 +22,20 @@ export const Icon = withTheme(
         {material ? (
           <Material
             name={iconName}
-            size={theme.px(size || 24)}
-            color={theme[color || 'primary']}
+            size={size || 24}
+            color={color || 'primary'}
           />
         ) : feather ? (
           <Feather
             name={iconName}
-            size={theme.px(size || 24)}
-            color={theme[color || 'primary']}
+            size={size || 24}
+            color={color || 'primary'}
           />
         ) : (
           <Ionicons
             name={iconName}
-            size={theme.px(size || 24)}
-            color={theme[color || 'primary']}
+            size={size || 24}
+            color={color || 'primary'}
           />
         )}
       </Box>

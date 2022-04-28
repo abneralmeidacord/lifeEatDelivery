@@ -1,5 +1,6 @@
 import React from 'react';
-import { Icon } from '~/components';
+import { Icon } from '~/components/atoms/Icon';
+import { colors } from '~/styles/colors';
 import { Box, Touchable } from '~/components';
 
 const ICONS_ASSETS = [
@@ -38,11 +39,9 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
       flex-direction="row"
       alignItems="baseline"
       justifyContent="space-between"
-      w={100}
-      h={64}
+      w={375}
+      h={70}
       btw={1}
-      topLeftRadius={24}
-      topRightRadius={24}
       overflow="hidden"
       position="absolute"
       bottom={0}>
@@ -79,12 +78,12 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
         const ItemInfo = ICONS_ASSETS.find(item => item.name === label);
 
         return (
-          <Box
+          <Touchable
             display="flex"
             w="25%"
             height="100%"
             alignItems="center"
-            justifyContent="center "
+            justifyContent=" center"
             key={ItemInfo.id}
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
@@ -93,11 +92,12 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
             onPress={onPress}
             onLongPress={onLongPress}>
             <Icon
+              material
               color={isFocused ? colors.primary : colors.gray}
               size={24}
               name={ItemInfo.icon}
             />
-          </Box>
+          </Touchable>
         );
       })}
     </Box>
