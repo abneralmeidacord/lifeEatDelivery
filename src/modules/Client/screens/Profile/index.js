@@ -26,7 +26,7 @@ export const ProfileScreen = () => {
           flexDir="column"
           alingItems="flex-start"
           justifyContent="flex-start">
-          <Text.Title mb={8}>Perfil</Text.Title>
+          <Text.Title  mb={16}>Perfil</Text.Title>
         </Box>
       </Box>
     </Box>

@@ -7,16 +7,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import { theme } from '~/styles/theme';
 
 export const Icon = withTheme(
-  ({
-    iconName,
-    color,
-    feather,
-    ionicons,
-    material,
-    disabled,
-    size,
-    ...props
-  }) => {
+  ({ iconName, color, feather, ionicons, material, disabled, size }) => {
     return (
       <Box disabled={disabled} size={size || 20}>
         {material ? (

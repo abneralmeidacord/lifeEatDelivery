@@ -27,7 +27,7 @@ return (
           flexDir="column"
           alingItems="flex-start"
           justifyContent="flex-start">
-          <Text.Title mb={8}>Meus Pedidos</Text.Title>
+          <Text.Title mb={16}>Meus Pedidos</Text.Title>
         </Box>
       </Box>
     </Box>

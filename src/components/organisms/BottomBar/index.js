@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '~/components/atoms/Icon';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { colors } from '~/styles/colors';
 import { Box, Touchable } from '~/components';
 
@@ -81,9 +81,9 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
           <Touchable
             display="flex"
             w="25%"
-            height="100%"
+            h="100%"
             alignItems="center"
-            justifyContent=" center"
+            justifyContent="center"
             key={ItemInfo.id}
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}

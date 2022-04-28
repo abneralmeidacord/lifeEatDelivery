@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, Avatar, Box, TypeList } from '~/components';
+import { Text, Avatar, Box, TypeList, Icon } from '~/components';
+//import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const HomeScreen = () => {
   return (
