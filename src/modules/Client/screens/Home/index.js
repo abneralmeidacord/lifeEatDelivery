@@ -1,5 +1,13 @@
 import React from 'react';
-import { Text, Avatar, Box, TypeList, Icon } from '~/components';
+import {
+  Text,
+  Avatar,
+  Box,
+  TypeList,
+  Icon,
+  FoodsList,
+  Scroll,
+} from '~/components';
 //import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const HomeScreen = () => {
@@ -44,11 +52,12 @@ export const HomeScreen = () => {
           />
         </Box>
       </Box>
-      <Box>
+      <Box display="flex" h="100%">
         <Text.Title ml={20} mt={24} mb={16}>
           Cardápio
         </Text.Title>
         <TypeList />
+        <FoodsList />
       </Box>
     </Box>
   );

@@ -35,6 +35,7 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
 
   return (
     <Box
+      bg="white"
       display="flex"
       flex-direction="row"
       alignItems="baseline"

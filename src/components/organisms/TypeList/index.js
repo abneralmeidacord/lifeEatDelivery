@@ -5,26 +5,30 @@ import { List } from './styles';
 const MOCKDATA = [
   {
     id: 1,
-    title: 'Escondidinho',
+    title: 'Todos',
   },
   {
     id: 2,
-    title: 'Panqueca',
+    title: 'Escondidinho',
   },
   {
     id: 3,
-    title: 'Refeições',
+    title: 'Panqueca',
   },
   {
     id: 4,
-    title: 'Massas',
+    title: 'Refeições',
   },
   {
     id: 5,
-    title: 'Vegano',
+    title: 'Massas',
   },
   {
     id: 6,
+    title: 'Vegano',
+  },
+  {
+    id: 7,
     title: 'Vegetariano',
   },
 ];
