@@ -14,11 +14,14 @@ export const Counter = ({ props }) => {
       h={24}
       w={74}
       {...props}>
-      <Touchable w="30%" onClick={() => setCount(count - 1)}>
+      <Touchable
+        w="30%"
+        onClick={() => setCount(count - 1)}
+        disabled={count === 0}>
         <Icon feather name="minus" size={14} />
       </Touchable>
       <Box>
-       <Text.CardTitle>{count}</Text.CardTitle>  
+        <Text.CardTitle>{count}</Text.CardTitle>
       </Box>
       <Touchable w="30%" onClick={() => setCount(count + 1)}>
         <Icon feather name="plus" size={14} />
