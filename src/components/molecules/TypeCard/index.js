@@ -12,8 +12,7 @@ export const TypeCard = ({
   return (
     <Touchable
       display="flex"
-      w={110}
-      h={24}
+      h={28}
       alignItems="center"
       justifyContent="center"
       ph={8}

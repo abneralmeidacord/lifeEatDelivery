@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { BaseText } from './styles';
 import {
-  fontPropsTypes,
+  fontProps,
   sizePropsTypes,
   colorPropsTypes,
   marginPropsTypes,
@@ -49,7 +49,9 @@ Text.CardTitle = ({ children, ...props }) => (
   </BaseText>
 );
 Text.CardText = ({ children, ...props }) => (
-  <BaseText fontsize={12} fontFamily="medium" {...props}></BaseText>
+  <BaseText fontsize={10} fontFamily="medium" {...props}>
+    {children}
+  </BaseText>
 );
 
 Text.propTypes = {
@@ -59,7 +61,6 @@ Text.propTypes = {
     PropTypes.node,
     PropTypes.func,
   ]),
-  ...fontPropsTypes,
   ...sizePropsTypes,
   ...colorPropsTypes,
   ...marginPropsTypes,

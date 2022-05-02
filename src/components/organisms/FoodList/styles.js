@@ -4,7 +4,7 @@ export const List = styled.FlatList.attrs({
   contentContainerStyle: {
     width: '100%',
     alignItems: 'center',
-    paddingBottom: 80,
+    paddingBottom: 340,
   },
 })`
   height: 100%;

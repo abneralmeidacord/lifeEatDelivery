@@ -42,10 +42,10 @@ export const TypeList = () => {
       data={MOCKDATA}
       renderItem={({ item }) => (
         <TypeCard
+          text={item.title}
           selected={selected === item?.id}
           onPress={() => setSelected(item.id)}
           onLongPress={() => setSelected(false)}
-          text={item.title}
         />
       )}
       keyExtractor={item => item.id}

@@ -7,8 +7,8 @@ import {
   Icon,
   FoodsList,
   Scroll,
+  Screen,
 } from '~/components';
-//import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const HomeScreen = () => {
   return (
@@ -52,13 +52,13 @@ export const HomeScreen = () => {
           />
         </Box>
       </Box>
-      <Box display="flex" h="100%">
+      <Box w="100%">
         <Text.Title ml={20} mt={24} mb={16}>
           Cardápio
         </Text.Title>
         <TypeList />
-        <FoodsList />
       </Box>
+      <FoodsList />
     </Box>
   );
 };

@@ -37,12 +37,13 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
     <Box
       bg="white"
       display="flex"
-      flex-direction="row"
+      flexDir="row"
       alignItems="baseline"
       justifyContent="space-between"
       w={375}
       h={70}
       btw={1}
+      borderColor="gray"
       overflow="hidden"
       position="absolute"
       bottom={0}>

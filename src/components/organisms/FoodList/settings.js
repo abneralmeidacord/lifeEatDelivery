@@ -32,13 +32,14 @@ export const MOCK_DATA = [
     name: 'Macarrão Integral e Carne',
     image:
       'https://scontent.fvag1-1.fna.fbcdn.net/v/t39.30808-6/276024590_485691193216547_4049505977227936096_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=9267fe&_nc_ohc=GOJb9MNXWaMAX_X_UIh&tn=FnByAVIOCMlPJmJD&_nc_ht=scontent.fvag1-1.fna&oh=00_AT_erUd1f9Bs_zY6F0c4S6jbVxyqvAiilw1JfehrLg4XKw&oe=6270933A',
-    description: 'Feito com Macarrão integral, patinho moído, brócolis e cenoura',
+    description:
+      'Feito com macarrão integral, carne moída, brócolis e cenoura',
   },
   {
     id: 5,
     name: 'Marmita Low Carb',
     image:
       'https://scontent.fvag1-1.fna.fbcdn.net/v/t39.30808-6/274719744_473103714475295_2253921544559531450_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=9267fe&_nc_ohc=G2KMm-n4sHoAX8_n5e8&_nc_ht=scontent.fvag1-1.fna&oh=00_AT-Ld-rQTMpbdjmRejXJ9OeRzPSRzn50EP6cHBKXlMOXOQ&oe=62709DBB',
-    description: 'Feito com Macarrão, frango, couve-flor e cenoura',
+    description: 'Feito com macarrão, frango, couve-flor e cenoura',
   },
 ];
