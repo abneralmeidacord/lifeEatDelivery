@@ -5,20 +5,22 @@ export const Counter = ({ props }) => {
   const [count, setCount] = useState(0);
   return (
     <Box
-      justifyContent="center"
-      alignItems="center"
-      borderColor="primary"
+      display="flex"
+      flexDir="row"
+      alignItems="baseline"
+      justifyContent="space-between"
       bw={1}
       br={6}
       h={24}
       w={74}
-      flexDir="row"
       {...props}>
-      <Touchable onClick={() => setCount(count - 1)}>
-        <Icon feather name="minus" size={7} />
+      <Touchable w="30%" onClick={() => setCount(count - 1)}>
+        <Icon feather name="minus" size={14} />
       </Touchable>
-      <Text.CardTitle>{count}</Text.CardTitle>
-      <Touchable onClick={() => setCount(count + 1)}>
+      <Box>
+       <Text.CardTitle>{count}</Text.CardTitle>  
+      </Box>
+      <Touchable w="30%" onClick={() => setCount(count + 1)}>
         <Icon feather name="plus" size={14} />
       </Touchable>
     </Box>
