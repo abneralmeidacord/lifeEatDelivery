@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Touchable, Text } from '~/components';
 
 export const TypeCard = ({
@@ -11,13 +11,11 @@ export const TypeCard = ({
 }) => {
   return (
     <Touchable
-      display="flex"
       h={28}
       alignItems="center"
       justifyContent="center"
-      ph={8}
+      ph={12}
       br={14}
-      mr={8}
       selected={selected}
       onPress={onPress}
       onLongPress={onLongPress}
@@ -25,7 +23,7 @@ export const TypeCard = ({
       bw={1}
       borderColor="primary"
       {...props}>
-      <Text.CardText size={12} color={selected ? 'white' : 'primary'}>
+      <Text.CardText color={selected ? 'white' : 'primary'}>
         {text}
       </Text.CardText>
     </Touchable>

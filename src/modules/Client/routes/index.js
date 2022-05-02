@@ -28,7 +28,7 @@ export const ClientNavigator = () => {
   const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Home" component={BottomNavigator} />
+      <Stack.Screen name="HomeClient" component={BottomNavigator} />
     </Stack.Navigator>
   );
 };

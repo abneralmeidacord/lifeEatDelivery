@@ -42,6 +42,7 @@ export const TypeList = () => {
       data={MOCKDATA}
       renderItem={({ item }) => (
         <TypeCard
+          mr={8}
           text={item.title}
           selected={selected === item?.id}
           onPress={() => setSelected(item.id)}

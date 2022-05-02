@@ -32,13 +32,7 @@ Text.RegularText = ({ children, ...props }) => (
 );
 
 Text.MediumText = ({ children, ...props }) => (
-  <BaseText fontsize={14} fontFamily="medium" {...props}>
-    {children}
-  </BaseText>
-);
-
-Text.TinyText = ({ children, ...props }) => (
-  <BaseText fontsize={12} fontFamily="regular" {...props}>
+  <BaseText fontsize={14} fontFamily="semiBold" {...props}>
     {children}
   </BaseText>
 );
@@ -48,8 +42,15 @@ Text.CardTitle = ({ children, ...props }) => (
     {children}
   </BaseText>
 );
+
 Text.CardText = ({ children, ...props }) => (
-  <BaseText fontsize={10} fontFamily="medium" {...props}>
+  <BaseText fontSize={12} fontFamily="semiBold" {...props}>
+    {children}
+  </BaseText>
+);
+
+Text.TinyText = ({ children, ...props }) => (
+  <BaseText fontSize={10} fontFamily="regular" {...props}>
     {children}
   </BaseText>
 );

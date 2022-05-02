@@ -2,6 +2,11 @@ import styled from 'styled-components/native';
 
 const SIZES = {
   small: {
+    w: 60,
+    h: 60,
+    br: 8,
+  },
+  medium: {
     w: 70,
     h: 68,
     br: 12,

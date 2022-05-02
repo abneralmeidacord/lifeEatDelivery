@@ -1,39 +1,32 @@
 import React from 'react';
-import { Box, Touchable, Avatar, Text } from '~/components';
+import { Box, Avatar, Text } from '~/components';
 import { Counter } from '../Counter';
-import { CounterContainer } from './styles';
 
-export const FoodCard = ({ food }) => {
+export const FoodCard = ({ food, ...props }) => {
   return (
     <Box
-      bg="white"
-      dir="row"
-      h={110}
+      {...props}
+      minH={110}
       w={335}
       br={8}
       borderColor="primary"
       bw={1}
       flexDir="row"
       alingItems="center"
-      justifyContent="space-between">
+      justifyContent="space-between"
+      p={16}
+      >
+      <Avatar source={{ uri: food.image }} />
       <Box
-        display="flex"
-        w="30%"
-        flexDir="column"
-        alignItems="center"
-        justifyContent="center">
-        <Avatar source={{ uri: food.image }} />
-      </Box>
-      <Box
-        display="flex"
-        w="70%"
-        flexDir="column"
         alignItems="flex-start"
-        justifyContent="center">
-        <Text.CardTitle mr={8} mb={3}>
+        justifyContent="flex-start"
+        ml={16}
+        w={224}
+        >
+        <Text.CardTitle mb={3}>
           {food.name}
         </Text.CardTitle>
-        <Text.CardText mb={6}>{food.description}</Text.CardText>
+        <Text.CardText fontFamily="regular" mb={6}>{food.description}</Text.CardText>
           <Counter mb={8} />
       </Box>
     </Box>
