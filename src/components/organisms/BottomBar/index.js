@@ -41,7 +41,7 @@ export const BottomBar = ({ state, descriptors, navigation }) => {
       alignItems="baseline"
       justifyContent="space-between"
       w={375}
-      h={70}
+      h={64}
       btw={1}
       borderColor="gray"
       overflow="hidden"

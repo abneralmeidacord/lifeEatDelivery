@@ -7,7 +7,7 @@ export const FoodsList = () => {
   return (
     <List
       data={MOCK_DATA}
-      renderItem={({ item }) => <FoodCard mb={16} food={item} />}
+      renderItem={({ item }) => <FoodCard mb={12} food={item} />}
       keyExtractor={item => item.id}
     />
   );

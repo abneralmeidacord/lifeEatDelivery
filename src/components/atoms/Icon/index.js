@@ -4,27 +4,26 @@ import { Box } from '~/components';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Material from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
-import { theme } from '~/styles/theme';
 
 export const Icon = withTheme(
-  ({ iconName, color, feather, ionicons, material, disabled, size }) => {
+  ({ name, color, feather, ionicons, material, disabled, size }) => {
     return (
-      <Box disabled={disabled} size={size || 20}>
+      <Box>
         {material ? (
           <Material
-            name={iconName}
+            name={name}
             size={size || 24}
             color={color || 'primary'}
           />
         ) : feather ? (
           <Feather
-            name={iconName}
+            name={name}
             size={size || 24}
             color={color || 'primary'}
           />
         ) : (
           <Ionicons
-            name={iconName}
+            name={name}
             size={size || 24}
             color={color || 'primary'}
           />
