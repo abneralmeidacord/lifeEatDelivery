@@ -1,4 +1,4 @@
-import styled from 'styled-components/native'
+import styled from 'styled-components/native';
 import {
   colorProps,
   colorPropsTypes,
@@ -12,10 +12,11 @@ import {
   sizePropsTypes,
   borderProps,
   borderPropsTypes,
-} from '~/styles/styled-system'
+} from '~/styles/styled-system';
 
 export const Scroll = styled.ScrollView.attrs(
-  ({ horizontal, pt, pb, pl, pr, theme, align }) => ({
+  ({ vertical, horizontal, pt, pb, pl, pr, theme, align }) => ({
+    vertical: vertical,
     horizontal: horizontal,
     showsVerticalScrollIndicator: false,
     showsHorizontalScrollIndicator: false,
@@ -33,7 +34,7 @@ export const Scroll = styled.ScrollView.attrs(
   ${flexProps}
   ${colorProps}
   ${marginProps}
-`
+`;
 
 Scroll.propTypes = {
   ...sizePropsTypes,
@@ -42,4 +43,4 @@ Scroll.propTypes = {
   ...paddingPropsTypes,
   ...marginPropsTypes,
   ...borderPropsTypes,
-}
+};

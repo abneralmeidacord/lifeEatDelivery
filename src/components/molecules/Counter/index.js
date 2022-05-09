@@ -23,7 +23,7 @@ export const Counter = ({ props }) => {
         <Text.CardTitle>{count}</Text.CardTitle>
       </Box>
       <Touchable onPress={() => setCount(count + 1)}>
-        <Icon feather name="plus" size={14} />
+        <Icon feather  name="plus" size={14} />
       </Touchable>
     </Box>
   );

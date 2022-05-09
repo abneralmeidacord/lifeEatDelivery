@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TypeCard } from '~/components/molecules';
-import { List } from './styles';
+import { List } from '~/components/atoms';
 
 const MOCKDATA = [
   {

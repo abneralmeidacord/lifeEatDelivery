@@ -1,13 +1,14 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
-import { Box } from '../Box';
-import { Text } from '../Text';
 import { Scroll } from '../Scroll';
+import { Box } from '../Box';
+import { Header } from '../Header';
 
-export const Screen = () => {
+export const ScreenContainer = ({ children, statusBarHidden, ...props }) => {
   return (
-    <Scroll h="100%" w={375} bg="transparent">
-      <Box w="100%" mt={32} />
-    </Scroll>
+    <Box h="100%" w="100%" bg="white" {...props}>
+      <StatusBar hidden={statusBarHidden} />
+      <Box>{children}</Box>
+    </Box>
   );
 };
