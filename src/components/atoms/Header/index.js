@@ -1,7 +1,6 @@
 import React from 'react';
-import { Icon, Box, Text, Avatar, Touchable } from '~/components/atoms';
+import { Icon, Box, Text, Avatar } from '~/components/atoms';
 import { useNavigation } from '@react-navigation/native';
-import { colors } from '~/styles';
 
 export const Header = ({
   withBack,
@@ -16,30 +15,30 @@ export const Header = ({
     <Box
       bbw={1}
       borderColor="primary"
-      ph={20}
-      pv={subtitle ? 24 : 0}
-      pt={subtitle ? 0 : 48}
       w="100%"
+      pb={16}
+      pt={32}
+      ph={20}
       flexDir="row"
-      alingItems="flex-start"
+      alignItems="center"
       justifyContent="space-between"
       {...props}>
-      {withBack && (
-        <Touchable h={32} w={32}>
+      <Box flexDir="row" alignItems="center">
+        {withBack && (
           <Icon
-            feather
+            w={20}
+            material
             name="arrow-left"
-            size={32}
-            color="primary"
-            disabled={!withBack}
+            size={24}
             onPress={() => navigation.goBack()}
+            mr={16}
+            ml={-4}
           />
-        </Touchable>
-      )}
-
-      <Box>
-        <Text.ScreenTitle mb={subtitle ? 8 : 0}>{title}</Text.ScreenTitle>
-        <Text.RegularText>{subtitle}</Text.RegularText>
+        )}
+        <Box>
+          {title && <Text.ScreenTitle>{title}</Text.ScreenTitle>}
+          {subtitle && <Text.RegularText mt={8}>{subtitle}</Text.RegularText>}
+        </Box>
       </Box>
       {withAvatar && (
         <Avatar
@@ -49,9 +48,7 @@ export const Header = ({
         />
       )}
       {withAdd && (
-        <Touchable h={32} w={32}>
-          <Icon material name="plus-circle" size={32} color="primary" />
-        </Touchable>
+        <Icon material name="plus-circle" size={32} />
       )}
     </Box>
   );
