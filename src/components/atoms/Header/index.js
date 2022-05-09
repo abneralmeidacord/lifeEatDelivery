@@ -25,11 +25,11 @@ export const Header = ({
       justifyContent="space-between"
       {...props}>
       {withBack && (
-        <Touchable>
+        <Touchable h={32} w={32}>
           <Icon
             feather
             name="arrow-left"
-            size={20}
+            size={32}
             color="primary"
             disabled={!withBack}
             onPress={() => navigation.goBack()}
@@ -49,8 +49,8 @@ export const Header = ({
         />
       )}
       {withAdd && (
-        <Touchable>
-          <Icon material name="plus-circle" size={33} color="primary" />
+        <Touchable h={32} w={32}>
+          <Icon material name="plus-circle" size={32} color="primary" />
         </Touchable>
       )}
     </Box>
