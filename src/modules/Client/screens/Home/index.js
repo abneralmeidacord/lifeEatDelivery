@@ -7,6 +7,7 @@ import {
   ScreenContainer,
   Header,
   Input,
+  Button,
 } from '~/components';
 
 export const HomeScreen = () => {

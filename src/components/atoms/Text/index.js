@@ -27,25 +27,32 @@ Text.Title = ({ children, ...props }) => (
 );
 
 Text.RegularText = ({ children, ...props }) => (
-  <BaseText fontsize={14} fontFamily="regular" {...props}>
+  <BaseText fontSize={14} fontFamily="regular" {...props}>
     {children}
   </BaseText>
 );
 
 Text.MediumText = ({ children, ...props }) => (
-  <BaseText fontsize={14} fontFamily="semiBold" {...props}>
+  <BaseText fontSize={14} fontFamily="semiBold" {...props}>
     {children}
   </BaseText>
 );
 
 Text.BoldText = ({ children, ...props }) => (
-  <BaseText fontsize={16} fontFamily="bold" {...props}>
+  <BaseText fontSize={16} fontFamily="bold" {...props}>
     {children}
   </BaseText>
 );
 
+Text.ExtraBoldText = ({ children, ...props }) => (
+  <BaseText fontFamily="extraBold" {...props}>
+    {children}
+  </BaseText>
+);
+
+
 Text.CardTitle = ({ children, ...props }) => (
-  <BaseText fontsize={14} fontFamily="bold" {...props}>
+  <BaseText fontSize={14} fontFamily="bold" {...props}>
     {children}
   </BaseText>
 );

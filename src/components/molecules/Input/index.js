@@ -23,6 +23,7 @@ export const Input = ({
         borderColor="primary"
         flexDir="column"
         focus={focus}
+        bg="white"
         {...props}>
         <Text.CardText color="gray">{label}</Text.CardText>
         <Text.InputText

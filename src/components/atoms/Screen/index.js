@@ -8,6 +8,7 @@ export const ScreenContainer = ({
   scroll,
   children,
   statusBarHidden,
+  bottomChildren,
   ...props
 }) => {
   return (
