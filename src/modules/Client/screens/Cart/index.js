@@ -3,6 +3,6 @@ import { ScreenContainer } from '~/components';
 
 export const CartScreen = () => {
   return (
-    <ScreenContainer withBack title="Carrinho de compras" />
+    <ScreenContainer title="Carrinho de compras" />
   );
 };

@@ -8,3 +8,4 @@ export * from './Avatar';
 export * from './Icon';
 export * from './List';
 export * from './Header';
+export * from './LocationImage';

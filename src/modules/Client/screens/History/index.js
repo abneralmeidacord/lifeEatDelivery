@@ -3,8 +3,6 @@ import { ScreenContainer, Header } from '~/components';
 
 export const HistoryScreen = () => {
   return (
-    <ScreenContainer>
-    <Header title="Meus pedidos"/>  
-    </ScreenContainer>
+    <ScreenContainer title="Meus pedidos"/>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { BaseText } from './styles';
+import { BaseText, InputText } from './styles';
 import {
   fontProps,
   sizePropsTypes,
@@ -9,6 +9,7 @@ import {
   marginPropsTypes,
   paddingPropsTypes,
 } from '~/styles/styled-system';
+import { Touchable } from '../Touchable';
 
 export const Text = ({ children, ...props }) => (
   <BaseText {...props}>{children}</BaseText>
@@ -37,6 +38,12 @@ Text.MediumText = ({ children, ...props }) => (
   </BaseText>
 );
 
+Text.BoldText = ({ children, ...props }) => (
+  <BaseText fontsize={16} fontFamily="bold" {...props}>
+    {children}
+  </BaseText>
+);
+
 Text.CardTitle = ({ children, ...props }) => (
   <BaseText fontsize={14} fontFamily="bold" {...props}>
     {children}
@@ -49,10 +56,34 @@ Text.CardText = ({ children, ...props }) => (
   </BaseText>
 );
 
+Text.InputText = ({ children, ...props }) => (
+  <InputText fontSize={16} fontFamily="semiBold" color="black" {...props}>
+    {children}
+  </InputText>
+);
+
 Text.TinyText = ({ children, ...props }) => (
   <BaseText fontSize={10} fontFamily="regular" {...props}>
     {children}
   </BaseText>
+);
+
+Text.Error = ({ children, ...props }) => (
+  <BaseText fontSize={12} fontFamily="bold" color="error" {...props}>
+    {children}
+  </BaseText>
+);
+Text.TextLink = ({ onPress, children, ...props }) => (
+  <Touchable
+    onPress={onPress}
+    align="flex-end"
+    h={24}
+    justify="flex-end"
+    {...props}>
+    <BaseText fontSize={12} fontFamily="semiBold" {...props}>
+      {children}
+    </BaseText>
+  </Touchable>
 );
 
 Text.propTypes = {

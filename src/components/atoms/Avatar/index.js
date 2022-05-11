@@ -16,6 +16,21 @@ const SIZES = {
     h: 120,
     br: 12,
   },
+  smallCircle: {
+    w: 60,
+    h: 60,
+    br: 30,
+  },
+  mediumCircle: {
+    w: 70,
+    h: 68,
+    br: 35,
+  },
+  largeCircle: {
+    w: 120,
+    h: 120,
+    br: 60,
+  },
 };
 
 export const Avatar = styled.Image`

@@ -6,5 +6,6 @@ export const colors = {
   white: '#FFFFFF',
   background: '#FFFFFF',
   orange: '#F58500',
+  error: '#FF0033',
   transparent: 'transparent',
 };
