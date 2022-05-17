@@ -23,29 +23,29 @@ export const ProfileScreen = () => {
     },
   ];
 
-  const { values, handleSubmit, setFieldValue, errors } = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      phoneNumber: '',
-      password: '',
-      confirmPassword: '',
-    },
-    validationSchema: Yup.object().shape({
-      name: Yup.string()
-        .required('Nome é obrigatório')
-        .min(3, 'Nome deve ter no mínimo 3 caracteres'),
-      email: Yup.string()
-        .required('E-mail é obrigatório')
-        .email('E-mail inválido'),
-      phoneNumber: Yup.string()
-        .required('Celular é obrigatório')
-        .min(16, 'Celular inválido'),
-      password: Yup.string()
-        .required('Senha é obrigatório')
-        .min(6, 'Senha deve ter no mínimo 6 caracteres'),
-    }),
-  });
+  const { values, handleSubmit, setFieldValue, errors, initialValues } =
+    useFormik({
+      initialValues: {
+        name: 'Abner',
+        email: 'abnersolk@gmail.com',
+        phoneNumber: '(37) 99860-1606',
+        password: '*********',
+      },
+      validationSchema: Yup.object().shape({
+        name: Yup.string()
+          .required('Nome é obrigatório')
+          .min(3, 'Nome deve ter no mínimo 3 caracteres'),
+        email: Yup.string()
+          .required('E-mail é obrigatório')
+          .email('E-mail inválido'),
+        phoneNumber: Yup.string()
+          .required('Celular é obrigatório')
+          .min(16, 'Celular inválido'),
+        password: Yup.string()
+          .required('Senha é obrigatório')
+          .min(6, 'Senha deve ter no mínimo 6 caracteres'),
+      }),
+    });
 
   return (
     <ScreenContainer scroll title="Perfil">
@@ -75,7 +75,6 @@ export const ProfileScreen = () => {
               value={values.name}
               onChangeText={text => setFieldValue('name', text)}
               error={errors.name}
-              placeholder="Seu Nome"
             />
             <Input
               label="EMAIL"
@@ -83,7 +82,6 @@ export const ProfileScreen = () => {
               onChangeText={text => setFieldValue('email', text)}
               error={errors.email}
               mt={16}
-              placeholder="meu.email@exemplo.com"
             />
             <Input
               label="CELULAR"
@@ -91,7 +89,6 @@ export const ProfileScreen = () => {
               onChangeText={text => setFieldValue('phoneNumber', text)}
               error={errors.phoneNumber}
               mt={16}
-              placeholder="(XX) X XXXX-XXXX"
             />
             <Input
               label="SENHA"
@@ -99,14 +96,9 @@ export const ProfileScreen = () => {
               onChangeText={text => setFieldValue('password', text)}
               error={errors.password}
               mt={16}
-              placeholder="********"
             />
           </Box>
-          <Box
-            mb={16}
-            w={335}
-            flexDir="row"
-            justifyContent="space-between">
+          <Box mb={16} w={335} flexDir="row" justifyContent="space-between">
             <Text.Title>Endereço</Text.Title>
             <Text.TextLink>Alterar</Text.TextLink>
           </Box>

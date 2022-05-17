@@ -7,7 +7,7 @@ import { AuthNavigator } from '~/modules/Auth/routes';
 export const Router = () => {
   return (
     <NavigationContainer>
-      <AuthNavigator />
+      <ClientNavigator />
     </NavigationContainer>
   );
 };

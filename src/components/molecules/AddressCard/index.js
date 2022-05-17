@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Avatar, Text, LocationImage } from '~/components';
+import { Box, Text, LocationImage } from '~/components';
 
-export const AddressCard = ({ item, location, ...props }) => {
+export const AddressCard = ({ ...props }) => {
   return (
     <Box
       {...props}
-      minH={110}
+      minH={82}
       w={335}
       br={8}
       borderColor="primary"
@@ -13,15 +13,12 @@ export const AddressCard = ({ item, location, ...props }) => {
       flexDir="row"
       alingItems="center"
       justifyContent="space-between"
-      p={16}
-      keyExtractor={item => item.id}>
+      p={16}>
       <LocationImage />
       <Box alignItems="flex-start" justifyContent="flex-start" ml={16} w={224}>
-        <Text.CardTitle mb={3}>Rua Padre João, 148</Text.CardTitle>
-        <Text.CardText>Centro, Cláudio/MG</Text.CardText>
-        <Text.CardText>CEP 35530-000
-          
-        </Text.CardText>
+        <Text.CardTitle mb={4}>Rua Padre João, 148</Text.CardTitle>
+        <Text.CardText mb={4}>Centro, Cláudio/MG</Text.CardText>
+        <Text.CardText>CEP 35530-000</Text.CardText>
       </Box>
     </Box>
   );
