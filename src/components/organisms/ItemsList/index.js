@@ -9,7 +9,12 @@ export const ItemsList = () => {
         data={MOCK_DATA}
         renderItem={({ item }) => (
           <Box mb={9} flexDir="row" alignItems="baseline">
-            <Text.TinyText fontFamily="bold" mr={13}>{item.count}</Text.TinyText>
+            <Box bg="graylight" br={4} h={16} w={16} alignItems="center" mr={13}>
+              <Text.TinyText fontFamily="bold">
+                {item.count}
+              </Text.TinyText>
+            </Box>
+
             <Text.CardText fontFamily="regular">{item.name}</Text.CardText>
           </Box>
         )}
