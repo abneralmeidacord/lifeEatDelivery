@@ -5,7 +5,6 @@ import {
   Box,
   Scroll,
   ItemsList,
-  PaymentMethodCard,
   AddressCard,
   Button,
   PaymentMethodList,
@@ -31,7 +30,6 @@ export const CartScreen = () => {
           <ItemsList />
           <Box
             mt={13}
-            mb={16}
             w={335}
             bbw={1}
             pv={13}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScreenContainer, Header } from '~/components';
+import { ScreenContainer } from '~/components';
 
 export const HistoryScreen = () => {
   return (
