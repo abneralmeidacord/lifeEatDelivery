@@ -3,7 +3,6 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import {
   ScreenContainer,
-  Header,
   Avatar,
   Box,
   Input,
@@ -23,32 +22,31 @@ export const ProfileScreen = () => {
     },
   ];
 
-  const { values, handleSubmit, setFieldValue, errors, initialValues } =
-    useFormik({
-      initialValues: {
-        name: 'Abner',
-        email: 'abnersolk@gmail.com',
-        phoneNumber: '(37) 99860-1606',
-        password: '*********',
-      },
-      validationSchema: Yup.object().shape({
-        name: Yup.string()
-          .required('Nome é obrigatório')
-          .min(3, 'Nome deve ter no mínimo 3 caracteres'),
-        email: Yup.string()
-          .required('E-mail é obrigatório')
-          .email('E-mail inválido'),
-        phoneNumber: Yup.string()
-          .required('Celular é obrigatório')
-          .min(16, 'Celular inválido'),
-        password: Yup.string()
-          .required('Senha é obrigatório')
-          .min(6, 'Senha deve ter no mínimo 6 caracteres'),
-      }),
-    });
+  const { values, handleSubmit, setFieldValue, errors } = useFormik({
+    initialValues: {
+      name: 'Abner',
+      email: 'abnersolk@gmail.com',
+      phoneNumber: '(37) 99860-1606',
+      password: '*********',
+    },
+    validationSchema: Yup.object().shape({
+      name: Yup.string()
+        .required('Nome é obrigatório')
+        .min(3, 'Nome deve ter no mínimo 3 caracteres'),
+      email: Yup.string()
+        .required('E-mail é obrigatório')
+        .email('E-mail inválido'),
+      phoneNumber: Yup.string()
+        .required('Celular é obrigatório')
+        .min(15, 'Celular inválido'),
+      password: Yup.string()
+        .required('Senha é obrigatório')
+        .min(6, 'Senha deve ter no mínimo 6 caracteres'),
+    }),
+  });
 
   return (
-    <ScreenContainer scroll title="Perfil">
+    <ScreenContainer scroll borderColor="gray" title="Perfil">
       <Box pt={28} pb={100} alignItems="center" w={375}>
         <Scroll>
           <Avatar
@@ -65,7 +63,8 @@ export const ProfileScreen = () => {
             mb={16}
             w={335}
             flexDir="row"
-            justifyContent="space-between">
+            justifyContent="space-between"
+            alignItems="baseline">
             <Text.Title>Dados Pessoais</Text.Title>
             <Text.TextLink>Alterar</Text.TextLink>
           </Box>
@@ -98,12 +97,17 @@ export const ProfileScreen = () => {
               mt={16}
             />
           </Box>
-          <Box mb={16} w={335} flexDir="row" justifyContent="space-between">
+          <Box
+            mb={16}
+            w={335}
+            flexDir="row"
+            justifyContent="space-between"
+            alignItems="baseline">
             <Text.Title>Endereço</Text.Title>
             <Text.TextLink>Alterar</Text.TextLink>
           </Box>
           <AddressCard mb={32} location={DATA} />
-          <Button>Salvar</Button>
+          <Button onPress={handleSubmit}>Salvar</Button>
         </Scroll>
       </Box>
     </ScreenContainer>

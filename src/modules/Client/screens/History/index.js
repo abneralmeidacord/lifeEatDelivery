@@ -3,6 +3,6 @@ import { ScreenContainer, Header } from '~/components';
 
 export const HistoryScreen = () => {
   return (
-    <ScreenContainer title="Meus pedidos"/>
+    <ScreenContainer borderColor="gray" title="Meus pedidos"/>
   );
 };

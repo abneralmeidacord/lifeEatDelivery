@@ -1,6 +1,5 @@
 import React from 'react';
-import { FoodCard } from '~/components';
-import { List } from '~/components/atoms';
+import { FoodCard, List } from '~/components';
 import { MOCK_DATA } from './settings';
 
 export const FoodsList = () => {

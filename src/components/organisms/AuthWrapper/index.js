@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Text } from '~/components';
-import background from '~/assets/img/background.png';
 
 export const AuthWrapper = ({ children, title, bottomChildren }) => {
   return (
