@@ -27,7 +27,7 @@ export const PaymentMethodCard = ({
         justifyContent="center"
         alignItems="center"
         {...props}>
-        {QR && (
+        { QR && (
           <Icon
             size={32}
             name="qr-code-outline"

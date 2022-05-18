@@ -8,6 +8,7 @@ import {
   PaymentMethodCard,
   AddressCard,
   Button,
+  PaymentMethodList,
 } from '~/components';
 
 export const CartScreen = () => {
@@ -49,38 +50,8 @@ export const CartScreen = () => {
             justifyContent="space-between"
             alignItems="baseline">
             <Text.Title>Forma de Pagamento</Text.Title>
-            <Text.TextLink>Alterar</Text.TextLink>
           </Box>
-          <Box w={335} flexDir="row" justifyContent="space-between">
-            <PaymentMethodCard
-              selected={selected}
-              onPress={() => setSelected(true)}
-              onLongPress={() => setSelected(false)}
-              QR
-              text="Pix"
-            />
-            <PaymentMethodCard
-              selected={selected}
-              onPress={() => setSelected(true)}
-              onLongPress={() => setSelected(false)}
-              money
-              text="Dinheiro"
-            />
-            <PaymentMethodCard
-              selected={selected}
-              onPress={() => setSelected(true)}
-              onLongPress={() => setSelected(false)}
-              card
-              text="Crédito"
-            />
-            <PaymentMethodCard
-              selected={selected}
-              onPress={() => setSelected(true)}
-              onLongPress={() => setSelected(false)}
-              card
-              text="Débito"
-            />
-          </Box>
+            <PaymentMethodList />
           <Box
             mt={24}
             mb={16}
@@ -91,7 +62,7 @@ export const CartScreen = () => {
             <Text.Title>Enderço de entrega</Text.Title>
             <Text.TextLink>Alterar</Text.TextLink>
           </Box>
-          <AddressCard mb={32}/>
+          <AddressCard mb={32} />
           <Button>Finalizar Pedido</Button>
         </Scroll>
       </Box>

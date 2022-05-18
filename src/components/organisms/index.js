@@ -3,3 +3,4 @@ export * from './BottomBar';
 export * from './FoodList';
 export * from './AuthWrapper';
 export * from './ItemsList'
+export * from './PaymentMethodList'
