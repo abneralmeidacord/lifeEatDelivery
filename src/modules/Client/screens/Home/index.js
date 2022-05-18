@@ -10,7 +10,6 @@ export const HomeScreen = () => {
 
   return (
     <ScreenContainer
-    
       withAvatar
       subtitle="Seja bem-vindo novamente."
       title="Olá, Abner!">

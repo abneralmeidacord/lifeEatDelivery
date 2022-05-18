@@ -4,6 +4,7 @@ import {
   CartScreen,
   HistoryScreen,
   ProfileScreen,
+  AddressScreen,
 } from '../screens';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomBar } from '~/components';
@@ -29,6 +30,7 @@ export const ClientNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HomeClient" component={BottomNavigator} />
+      <Stack.Screen name="Address" component={AddressScreen} />
     </Stack.Navigator>
   );
 };

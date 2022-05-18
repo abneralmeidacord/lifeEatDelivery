@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   ScreenContainer,
   Text,
@@ -9,9 +9,14 @@ import {
   Button,
   PaymentMethodList,
 } from '~/components';
+import { useNavigation } from '@react-navigation/native';
 
 export const CartScreen = () => {
-  const [selected, setSelected] = useState(false);
+  const navigation = useNavigation();
+  
+  const goToAddress = () => {
+    navigation.navigate('Address');
+  };
 
   return (
     <ScreenContainer scroll borderColor="gray" title="Carrinho de compras">
@@ -29,7 +34,6 @@ export const CartScreen = () => {
           </Box>
           <ItemsList />
           <Box
-            mt={13}
             w={335}
             bbw={1}
             pv={13}
@@ -58,7 +62,7 @@ export const CartScreen = () => {
             justifyContent="space-between"
             alignItems="baseline">
             <Text.Title>Enderço de entrega</Text.Title>
-            <Text.TextLink>Alterar</Text.TextLink>
+            <Text.TextLink onPress={goToAddress}>Alterar</Text.TextLink>
           </Box>
           <AddressCard mb={32} />
           <Button>Finalizar Pedido</Button>
