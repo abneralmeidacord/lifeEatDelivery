@@ -16,12 +16,15 @@ export const FoodCard = ({ food, ...props }) => {
       justifyContent="space-between"
       p={16}>
       <Avatar source={{ uri: food.image }} />
-      <Box alignItems="flex-start" justifyContent="flex-start" ml={16} w={250} pr={15}>
+      <Box alignItems="flex-start" justifyContent="flex-start" ml={16} w={235} >
         <Text.CardTitle mb={3}>{food.name}</Text.CardTitle>
         <Text.CardText fontFamily="regular" mb={6}>
           {food.description}
         </Text.CardText>
-        <Counter count={food.count}/>
+        <Box w={220} flexDir="row" alignItems="center" justifyContent="space-between">
+        <Counter Count={food.count}/>
+        <Text.CardTitle>{food.price}</Text.CardTitle>
+        </Box>
       </Box>
     </Box>
   );

@@ -11,8 +11,17 @@ import {
   AddressCard,
   Button,
 } from '~/components';
+import { useNavigation } from '@react-navigation/native';
+
 
 export const ProfileScreen = () => {
+  const navigation = useNavigation();
+
+  const goToAddress = () => {
+    navigation.navigate('Address');
+  };
+
+
   const DATA = [
     {
       id: 0,
@@ -104,7 +113,7 @@ export const ProfileScreen = () => {
             justifyContent="space-between"
             alignItems="baseline">
             <Text.Title>Endereço</Text.Title>
-            <Text.TextLink>Alterar</Text.TextLink>
+            <Text.TextLink onPress={goToAddress}>Alterar</Text.TextLink>
           </Box>
           <AddressCard mb={32} location={DATA} />
           <Button onPress={handleSubmit}>Salvar</Button>

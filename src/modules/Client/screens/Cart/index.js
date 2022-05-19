@@ -13,14 +13,18 @@ import { useNavigation } from '@react-navigation/native';
 
 export const CartScreen = () => {
   const navigation = useNavigation();
-  
+
   const goToAddress = () => {
     navigation.navigate('Address');
   };
 
+  const goToItems = () => {
+    navigation.navigate('Items');
+  };
+
   return (
     <ScreenContainer scroll borderColor="gray" title="Carrinho de compras">
-      <Box pt={6} pb={100} alignItems="center" w={375}>
+      <Box pt={6} pb={80} alignItems="center" w={375}>
         <Scroll>
           <Box
             mt={6}
@@ -29,8 +33,8 @@ export const CartScreen = () => {
             flexDir="row"
             justifyContent="space-between"
             alignItems="baseline">
-            <Text.Title>Items escolhidos</Text.Title>
-            <Text.TextLink>Alterar</Text.TextLink>
+            <Text.Title>Itens escolhidos</Text.Title>
+            <Text.TextLink onPress={goToItems}>Alterar</Text.TextLink>
           </Box>
           <ItemsList />
           <Box
@@ -53,7 +57,7 @@ export const CartScreen = () => {
             alignItems="baseline">
             <Text.Title>Forma de Pagamento</Text.Title>
           </Box>
-            <PaymentMethodList />
+          <PaymentMethodList />
           <Box
             mt={24}
             mb={16}

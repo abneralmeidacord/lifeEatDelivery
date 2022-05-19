@@ -1,13 +1,7 @@
 import React from 'react';
-import {
-  Text,
-  TypeList,
-  FoodsList,
-  ScreenContainer,
-} from '~/components';
+import { Text, TypeList, FoodsList, ScreenContainer, Box } from '~/components';
 
 export const HomeScreen = () => {
-
   return (
     <ScreenContainer
       withAvatar
@@ -17,7 +11,9 @@ export const HomeScreen = () => {
         Cardápio
       </Text.ScreenTitle>
       <TypeList />
-      <FoodsList />
+      <Box pb={350}>
+        <FoodsList />
+      </Box>
     </ScreenContainer>
   );
 };

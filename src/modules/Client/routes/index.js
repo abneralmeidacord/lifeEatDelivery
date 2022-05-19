@@ -5,6 +5,7 @@ import {
   HistoryScreen,
   ProfileScreen,
   AddressScreen,
+  ItemsScreen,
 } from '../screens';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomBar } from '~/components';
@@ -31,6 +32,7 @@ export const ClientNavigator = () => {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HomeClient" component={BottomNavigator} />
       <Stack.Screen name="Address" component={AddressScreen} />
+      <Stack.Screen name="Items" component={ItemsScreen} />
     </Stack.Navigator>
   );
 };
