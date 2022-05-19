@@ -14,6 +14,7 @@ export const ItemsList = () => {
                 {item.count}
               </Text.TinyText>
             </Box>
+
             <Text.CardText fontFamily="regular">{item.name}</Text.CardText>
           </Box>
         )}

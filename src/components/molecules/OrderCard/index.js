@@ -40,7 +40,7 @@ export const OrderCard = ({ waiting, ...props }) => {
       <Text.CardText mb={4} fontFamily="regular">
         Entrega realizada dia 22/01/2022
       </Text.CardText>
-      <Text.BoldText fontSize={12}>Valor total: R$ 13,90</Text.BoldText>
+      <Text.BoldText fontSize={12}>Valor total: R$ 55,60</Text.BoldText>
     </Box>
   );
 };
