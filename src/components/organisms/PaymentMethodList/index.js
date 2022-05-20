@@ -34,7 +34,8 @@ export const PaymentMethodList = () => {
       horizontal
       data={MOCKDATA}
       renderItem={({ item }) => (
-        <Box w={91} h={87} flexDir="row" alignItems="center" justifyContent="space-between">
+        <Box>
+            <Box w={83} h={87} flexDir="row" alignItems="center" justifyContent="flex-start">
           <PaymentMethodCard
             QR={item.qr}
             money={item.money}
@@ -45,6 +46,8 @@ export const PaymentMethodList = () => {
             onLongPress={() => setSelected(false)}
           />
         </Box>
+        </Box>
+      
       )}
       keyExtractor={item => item.id}
       showsHorizontalScrollIndicator={false}

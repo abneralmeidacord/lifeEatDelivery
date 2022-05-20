@@ -6,3 +6,4 @@ export * from './AddressCard';
 export * from './PaymentMethodCard';
 export * from './OrderCard'
 export * from './DateCard'
+export * from './ClientCard'

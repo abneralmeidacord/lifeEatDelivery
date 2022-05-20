@@ -3,6 +3,7 @@ import {
   Box,
   ScreenContainer,
   AddressCard,
+  ClientCard,
   Button,
   Scroll,
   PaymentMethodList,
@@ -34,6 +35,8 @@ export const OrderDetailScreen = () => {
               </Text.BoldText>
             </Box>
             <Text.CardText>Pedido realizado dia 22/02/2022</Text.CardText>
+            <Text.Title mv={16}>Cliente</Text.Title>
+            <ClientCard />
             <Box>
               <Text.Title mv={16}>Itens do pedido</Text.Title>
               <ItemsList />
