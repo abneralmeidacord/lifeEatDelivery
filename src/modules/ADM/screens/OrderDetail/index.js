@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   ScreenContainer,
@@ -10,9 +10,12 @@ import {
   ItemsList,
   Text,
   Icon,
+  SuccessModal,
 } from '~/components';
 
 export const OrderDetailScreen = () => {
+  const [successModalVisible, setSuccessModalVisible] = useState(false);
+
   return (
     <ScreenContainer withBack title="Detalhes do pedido">
       <Box pt={6} pb={80} alignItems="center" w={375}>
@@ -47,7 +50,17 @@ export const OrderDetailScreen = () => {
               <Text.Title mv={16}>Enderço de entrega</Text.Title>
               <AddressCard />
             </Box>
-            <Button>Confirmar pedido</Button>
+            <Button onPress={() => setSuccessModalVisible(true)}>
+              Confirmar pedido
+            </Button>
+            {successModalVisible && (
+              <Box alignItems="center">
+                <SuccessModal
+                  visilble={successModalVisible}
+                  text="Pedido realizado com sucesso!"
+                />
+              </Box>
+            )}
           </Box>
         </Scroll>
       </Box>

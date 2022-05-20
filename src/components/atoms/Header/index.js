@@ -11,6 +11,11 @@ export const Header = ({
   ...props
 }) => {
   const navigation = useNavigation();
+
+  const goToNewProduct = () => {
+    navigation.navigate('NewProduct');
+  };
+
   return (
     <Box
       bbw={1}
@@ -48,7 +53,7 @@ export const Header = ({
         />
       )}
       {withAdd && (
-        <Icon material name="plus-circle" size={32} />
+        <Icon material name="plus-circle" size={32} onPress={goToNewProduct}/>
       )}
     </Box>
   );

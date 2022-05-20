@@ -29,7 +29,7 @@ export const HomeScreen = () => {
         <Touchable onPress={goToOrderDetail}>
           <OrderCard waiting />
         </Touchable>
-        <Touchable>
+        <Touchable onPress={goToOrderDetail}>
           <OrderCard mt={12} waiting />
         </Touchable>
       </Box>

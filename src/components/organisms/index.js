@@ -5,3 +5,4 @@ export * from './AuthWrapper';
 export * from './ItemsList';
 export * from './PaymentMethodList';
 export * from './DateList';
+export * from './SuccessModal';

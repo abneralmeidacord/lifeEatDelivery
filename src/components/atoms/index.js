@@ -9,4 +9,4 @@ export * from './Icon';
 export * from './List';
 export * from './Header';
 export * from './LocationImage';
-export * from './SuccessImage';
+// export * from './SuccessImage'

@@ -8,4 +8,6 @@ export const colors = {
   orange: '#F58500',
   error: '#FF0033',
   transparent: 'transparent',
+  darkTransparent: 'rgba(0, 0, 0, 0.7)',
+  darkTransparentLight: 'rgba(0, 0, 0, 0.3)'
 };

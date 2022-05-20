@@ -4,7 +4,8 @@ import {
   HistoryScreen,
   ProductsScreen,
   ProfileScreen,
-  OrderDetailScreen
+  OrderDetailScreen,
+  NewProductScreen,
 } from '../screens';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomBar } from '~/components';
@@ -31,6 +32,7 @@ export const ADMNavigator = () => {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HomeADM" component={BottomNavigator} />
       <Stack.Screen name="OrderDetail" component={OrderDetailScreen} />
+      <Stack.Screen name="NewProduct" component={NewProductScreen} />
     </Stack.Navigator>
   );
 };
