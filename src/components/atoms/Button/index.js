@@ -15,7 +15,9 @@ export const Button = ({ outline, floating, children, ...props }) => {
       position={floating ? 'absolute' : ''}
       mb={floating ? 24 : ''}
       {...props}>
-      <Text.BoldText color="white">{children}</Text.BoldText>
+      <Text.BoldText color={outline ? 'primary' : 'white'}>
+        {children}
+      </Text.BoldText>
     </Touchable>
   );
 };

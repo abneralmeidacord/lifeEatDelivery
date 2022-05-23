@@ -15,6 +15,7 @@ import {
 
 export const OrderDetailScreen = () => {
   const [successModalVisible, setSuccessModalVisible] = useState(false);
+  
 
   return (
     <ScreenContainer withBack title="Detalhes do pedido">
@@ -44,7 +45,7 @@ export const OrderDetailScreen = () => {
               <Text.Title mv={16}>Itens do pedido</Text.Title>
               <ItemsList />
             </Box>
-            <Text.Title mv={16}>Itens do pedido</Text.Title>
+            <Text.Title mv={16}>Forma de pagamento</Text.Title>
             <PaymentMethodList />
             <Box mb={32}>
               <Text.Title mv={16}>Enderço de entrega</Text.Title>

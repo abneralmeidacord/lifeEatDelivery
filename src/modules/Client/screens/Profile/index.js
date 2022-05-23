@@ -79,27 +79,27 @@ export const ProfileScreen = () => {
           </Box>
           <Box mb={24}>
             <Input
-              label="NOME"
+              label="Nomr"
               value={values.name}
               onChangeText={text => setFieldValue('name', text)}
               error={errors.name}
             />
             <Input
-              label="EMAIL"
+              label="E-mail"
               value={values.email}
               onChangeText={text => setFieldValue('email', text)}
               error={errors.email}
               mt={16}
             />
             <Input
-              label="CELULAR"
+              label="Celular"
               value={values.phoneNumber}
               onChangeText={text => setFieldValue('phoneNumber', text)}
               error={errors.phoneNumber}
               mt={16}
             />
             <Input
-              label="SENHA"
+              label="Senha"
               value={values.password}
               onChangeText={text => setFieldValue('password', text)}
               error={errors.password}
