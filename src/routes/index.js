@@ -9,7 +9,7 @@ import { ADMNavigator } from '~/modules/ADM/routes';
 export const Router = () => {
   return (
     <NavigationContainer>
-      <ADMNavigator />
+      <AuthNavigator />
     </NavigationContainer>
   );
 };

@@ -79,7 +79,7 @@ export const ProfileScreen = () => {
           </Box>
           <Box mb={24}>
             <Input
-              label="Nomr"
+              label="Nome"
               value={values.name}
               onChangeText={text => setFieldValue('name', text)}
               error={errors.name}

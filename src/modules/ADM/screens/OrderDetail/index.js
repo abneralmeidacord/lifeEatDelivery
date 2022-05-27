@@ -12,10 +12,16 @@ import {
   Icon,
   SuccessModal,
 } from '~/components';
+import { useNavigation } from '@react-navigation/native';
 
 export const OrderDetailScreen = () => {
   const [successModalVisible, setSuccessModalVisible] = useState(false);
-  
+
+  const navigation = useNavigation();
+
+  const goToHome = () => {
+    navigation.navigate('Home');
+  };
 
   return (
     <ScreenContainer withBack title="Detalhes do pedido">
@@ -57,6 +63,7 @@ export const OrderDetailScreen = () => {
             {successModalVisible && (
               <Box alignItems="center">
                 <SuccessModal
+                  onPress={goToHome}
                   visilble={successModalVisible}
                   text="Pedido realizado com sucesso!"
                 />

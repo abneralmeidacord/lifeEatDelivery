@@ -3,8 +3,19 @@ import { AuthWrapper, Input, Text, Button, Box } from '~/components';
 import logoimg from '~/assets/img/Logo.png';
 import background from '~/assets/img/background.png';
 import { Logo, Background } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export const LoginScreen = () => {
+  const navigation = useNavigation();
+
+  const goToCreateAccount = () => {
+    navigation.navigate('CreateAccount');
+  };
+
+  const goToForgotPassword = () => {
+    navigation.navigate('ForgotPassword');
+  };
+
   return (
     <Background source={background}>
       <AuthWrapper>
@@ -31,10 +42,15 @@ export const LoginScreen = () => {
           alignItems="center"
           justifyContent="center">
           <Text.TextLink
+            onPress={goToCreateAccount}
             mt={8}
             children="Não possui uma conta? Faça seu cadastro"
           />
-          <Text.TextLink mt={8} children="Esqueceu sua senha?" />
+          <Text.TextLink
+            onPress={goToForgotPassword}
+            mt={8}
+            children="Esqueceu sua senha?"
+          />
         </Box>
       </AuthWrapper>
     </Background>

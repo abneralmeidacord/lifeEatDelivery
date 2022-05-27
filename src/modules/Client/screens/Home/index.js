@@ -12,7 +12,7 @@ export const HomeScreen = () => {
       </Text.ScreenTitle>
       <TypeList />
       <Box pb={350}>
-        <FoodsList />
+        <FoodsList Counter/>
       </Box>
     </ScreenContainer>
   );
