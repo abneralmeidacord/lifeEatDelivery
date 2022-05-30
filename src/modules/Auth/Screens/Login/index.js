@@ -4,9 +4,11 @@ import logoimg from '~/assets/img/Logo.png';
 import background from '~/assets/img/background.png';
 import { Logo, Background } from './styles';
 import { useNavigation } from '@react-navigation/native';
+import { useAuthStore } from '~/services/store/useAuth';
 
 export const LoginScreen = () => {
   const navigation = useNavigation();
+  const { setNavigationContainer } = useAuthStore()
 
   const goToCreateAccount = () => {
     navigation.navigate('CreateAccount');
@@ -15,6 +17,10 @@ export const LoginScreen = () => {
   const goToForgotPassword = () => {
     navigation.navigate('ForgotPassword');
   };
+
+  const onLogin = () => {
+    setNavigationContainer('client')
+  }
 
   return (
     <Background source={background}>
@@ -29,7 +35,7 @@ export const LoginScreen = () => {
         </Box>
         <Input label="Celular ou E-mail" placeholder="Seu celular ou e-mail" />
         <Input mt={24} label="SENHA" placeholder="******" />
-        <Button mt={24}>Login</Button>
+        <Button mt={24} onPess={onLogin}>Login</Button>
         <Box alignItems="center" justifyContent="center">
           <Text.TextLink
             onPress={goToCreateAccount}
