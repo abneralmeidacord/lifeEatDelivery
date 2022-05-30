@@ -1,6 +1,5 @@
 import React from 'react';
 import { FoodCard, List } from '~/components';
-import { Touchable } from '~/components/atoms';
 import { MOCK_DATA } from './settings';
 import { useNavigation } from '@react-navigation/native';
 

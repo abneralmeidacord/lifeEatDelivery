@@ -9,7 +9,7 @@ export const AuthWrapper = ({ children, title, bottomChildren }) => {
       alignItems="center"
       justifyContent="flex-start"
       pv={48}
-      ph={15}>
+      ph={20}>
       <Box w="100%">
         {children}
       </Box>
