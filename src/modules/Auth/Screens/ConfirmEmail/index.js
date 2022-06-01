@@ -12,9 +12,12 @@ import {
   SuccessModal,
 } from '~/components';
 import { useNavigation } from '@react-navigation/native';
+import { useAuthStore } from '~/services';
+
 
 export const ConfirmEmailScreen = () => {
   const navigation = useNavigation();
+  const { setUser } = useAuthStore();
 
   const goToNewPassword = () => {
     navigation.navigate('NewPassword');
@@ -29,6 +32,10 @@ export const ConfirmEmailScreen = () => {
         .required('Código é obrigatório')
         .min(6, 'Código deve ter no mínimo 6 caracteres'),
     }),
+    onSubmit: props => {
+      setUser(props);
+      goToNewPassword();
+    },
   });
 
   return (
@@ -54,7 +61,7 @@ export const ConfirmEmailScreen = () => {
         </Box>
       </Box>
 
-      <Button onPress={goToNewPassword} mt={417}>
+      <Button onPress={handleSubmit} mt={417}>
         Próximo
       </Button>
     </ScreenContainer>

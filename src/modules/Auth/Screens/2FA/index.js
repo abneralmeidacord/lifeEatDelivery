@@ -12,9 +12,12 @@ import {
   SuccessModal,
 } from '~/components';
 import { useNavigation } from '@react-navigation/native';
+import { useAuthStore } from '~/services';
+
 
 export const TWOFAScreen = () => {
   const navigation = useNavigation();
+  const { setUser } = useAuthStore();
 
   const goToLogin = () => {
     navigation.navigate('Login');
@@ -31,6 +34,10 @@ export const TWOFAScreen = () => {
         .required('Código é obrigatório')
         .min(6, 'Código deve ter no mínimo 6 caracteres'),
     }),
+    onSubmit: props => {
+      setUser(props);
+      setSuccessModalVisible(true);
+    },
   });
 
   return (
@@ -56,7 +63,7 @@ export const TWOFAScreen = () => {
         </Box>
       </Box>
 
-      <Button mt={417} onPress={() => setSuccessModalVisible(true)}>
+      <Button mt={417} onPress={handleSubmit}>
         Próximo
       </Button>
       {successModalVisible && (

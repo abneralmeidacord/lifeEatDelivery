@@ -3,9 +3,12 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { AuthWrapper, Input, Button, ScreenContainer, Box } from '~/components';
 import { useNavigation } from '@react-navigation/native';
+import { useAuthStore } from '~/services';
 
 export const ForgotPasswordScreen = () => {
   const navigation = useNavigation();
+  const { setUser } = useAuthStore();
+
 
   const goToConfirmEmail = () => {
     navigation.navigate('ConfirmEmail');
@@ -20,6 +23,10 @@ export const ForgotPasswordScreen = () => {
         .required('E-mail é obrigatório')
         .email('E-mail inválido'),
     }),
+    onSubmit: props => {
+      setUser(props);
+      goToConfirmEmail();
+    },
   });
 
   return (
@@ -31,7 +38,7 @@ export const ForgotPasswordScreen = () => {
         error={errors.email}
         placeholder="meu.email@exemplo.com"
       />
-      <Button onPress={goToConfirmEmail} mt={465}>
+      <Button onPress={handleSubmit} mt={450}>
         Próximo
       </Button>
     </ScreenContainer>

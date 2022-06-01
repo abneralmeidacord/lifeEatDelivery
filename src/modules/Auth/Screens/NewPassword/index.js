@@ -12,9 +12,11 @@ import {
   SuccessModal,
 } from '~/components';
 import { useNavigation } from '@react-navigation/native';
+import { useAuthStore } from '~/services';
 
 export const NewPasswordScreen = () => {
   const navigation = useNavigation();
+  const { setUser } = useAuthStore();
 
   const goToLogin = () => {
     navigation.navigate('Login');
@@ -24,17 +26,21 @@ export const NewPasswordScreen = () => {
 
   const { values, handleSubmit, setFieldValue, errors } = useFormik({
     initialValues: {
-      newPassword: '',
-      confirmNewPassword: '',
+      password: '',
+      confirmPassword: '',
     },
     validationSchema: Yup.object().shape({
-      newPassword: Yup.string()
+      password: Yup.string()
         .required('Nova senha é obrigatório')
         .min(8, 'Nova senha deve ter no mínimo 8 caracteres'),
-      confirmNewPassword: Yup.string()
+      confirmPassword: Yup.string()
         .required('Nova senha é obrigatório')
         .min(8, 'Nova senha deve ter no mínimo 8 caracteres'),
     }),
+    onSubmit: props => {
+      setUser(props);
+      setSuccessModalVisible(true);
+    },
   });
 
   return (
@@ -45,20 +51,20 @@ export const NewPasswordScreen = () => {
       subtitle="Para redefina a sua senha digite-a nos campos abaixo">
       <Input
         label="Nova senha"
-        value={values.code}
-        onChangeText={text => setFieldValue('code', text)}
-        error={errors.code}
-        placeholder="Nova senha"
+        value={values.password}
+        onChangeText={text => setFieldValue('password', text)}
+        error={errors.password}
+        placeholder="********"
       />
       <Input
         label="Confirmar nova senha"
-        value={values.code}
-        onChangeText={text => setFieldValue('code', text)}
-        error={errors.code}
+        value={values.confirmPassword}
+        onChangeText={text => setFieldValue('confirmPassword', text)}
+        error={errors.confirmPassword}
         mt={16}
-        placeholder="Nova senha"
+        placeholder="********"
       />
-      <Button onPress={() => setSuccessModalVisible(true)} mt={417}>
+      <Button onPress={handleSubmit} mt={400}>
         Próximo
       </Button>
 

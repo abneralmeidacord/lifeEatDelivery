@@ -1,10 +1,19 @@
 import React from 'react';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { AuthWrapper, Input, Button, ScreenContainer, Box } from '~/components';
+import {
+  AuthWrapper,
+  Input,
+  Button,
+  ScreenContainer,
+  Box,
+  Scroll,
+} from '~/components';
 import { useNavigation } from '@react-navigation/native';
+import { useAuthStore } from '~/services';
 
 export const CreateAccountScreen = () => {
+  const { setUser } = useAuthStore();
   const navigation = useNavigation();
 
   const goTo2FA = () => {
@@ -28,7 +37,7 @@ export const CreateAccountScreen = () => {
         .email('E-mail inválido'),
       phoneNumber: Yup.string()
         .required('Celular é obrigatório')
-        .min(16, 'Celular inválido'),
+        .min(11, 'Celular inválido'),
       password: Yup.string()
         .required('Senha é obrigatório')
         .min(6, 'Senha deve ter no mínimo 6 caracteres'),
@@ -36,10 +45,15 @@ export const CreateAccountScreen = () => {
         .required('Confirmar Senha é obrigatório')
         .min(6, 'Confirmar Senha deve ter no mínimo 6 caracteres'),
     }),
+    onSubmit: props => {
+      setUser(props);
+      goTo2FA();
+    },
   });
 
   return (
-    <ScreenContainer mb={24} alignItems="center" title="Crie sua conta">
+    <ScreenContainer scroll mb={24} alignItems="center" title="Crie sua conta">
+      <Box align="flex-start">
         <Input
           label="Nome"
           value={values.name}
@@ -79,9 +93,10 @@ export const CreateAccountScreen = () => {
           mt={16}
           placeholder="********"
         />
-        <Button onPress={goTo2FA} mt={200}>
+        <Button onPress={handleSubmit} mt={200}>
           Próximo
         </Button>
+      </Box>
     </ScreenContainer>
   );
 };

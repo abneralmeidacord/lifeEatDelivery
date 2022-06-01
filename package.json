@@ -16,6 +16,7 @@
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
     "babel-plugin-root-import": "^6.6.0",
+    "date-fns": "^2.28.0",
     "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
     "formik": "^2.2.9",
     "react": "17.0.2",
@@ -26,7 +27,8 @@
     "react-native-vector-icons": "^9.1.0",
     "react-native-vector-image": "^0.3.3",
     "styled-components": "^5.3.5",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
